@@ -1,0 +1,5 @@
+/.apt_src/
+/build/
+/.settings/
+/.classpath
+/.project
