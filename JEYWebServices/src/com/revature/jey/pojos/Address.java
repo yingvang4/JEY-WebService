@@ -1,33 +1,31 @@
 package com.revature.jey.pojos;
 
 public class Address {
-	private long address_Type;
+	private long address_ID;
 	private String address1;
 	private String address2;
-	private String address3;
 	private String city;
 	private String state;
 	private long zip_Code;
 	private String country;
 	
-	public Address(long address_Type, String address1, String address2, String address3, String city, String state,
-			long zip_Code, String country) {
+	public Address(long address_ID, String address1, String address2, String city, String state, long zip_Code,
+			String country) {
 		super();
-		this.address_Type = address_Type;
+		this.address_ID = address_ID;
 		this.address1 = address1;
 		this.address2 = address2;
-		this.address3 = address3;
 		this.city = city;
 		this.state = state;
 		this.zip_Code = zip_Code;
 		this.country = country;
 	}
 	
-	public long getAddress_Type() {
-		return address_Type;
+	public long getAddress_ID() {
+		return address_ID;
 	}
-	public void setAddress_Type(long address_Type) {
-		this.address_Type = address_Type;
+	public void setAddress_ID(long address_ID) {
+		this.address_ID = address_ID;
 	}
 	public String getAddress1() {
 		return address1;
@@ -40,12 +38,6 @@ public class Address {
 	}
 	public void setAddress2(String address2) {
 		this.address2 = address2;
-	}
-	public String getAddress3() {
-		return address3;
-	}
-	public void setAddress3(String address3) {
-		this.address3 = address3;
 	}
 	public String getCity() {
 		return city;
