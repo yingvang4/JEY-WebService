@@ -4,7 +4,7 @@ import java.sql.CallableStatement;
 import java.sql.Connection;
 import java.sql.SQLException;
 
-import com.revature.jey.connections.OracleConnectionPending;
+import com.revature.jey.connections.OracleConnection;
 import com.revature.jey.pojos.Card;
 
 public class CardDAO {
@@ -17,7 +17,7 @@ public class CardDAO {
 	// output: none
 	public void insertIntoCard(Card newCard) 
 	{
-		conn = OracleConnectionPending.getOracleConnection();
+		conn = OracleConnection.getOracleConnection();
 		try {
 			String sqlCommand = "call CREATE_CARD(?,?,?)";
 			CallableStatement insertCardCallableStmt = conn.prepareCall(sqlCommand);
