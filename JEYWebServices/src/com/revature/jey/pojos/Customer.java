@@ -21,6 +21,10 @@ public class Customer {
 	private long admin_Approved;
 	private long admin_Archived;
 	
+	public Customer() {
+		
+	}
+	
 	public Customer(long customer_ID, long status, String first_Name, String middle_Name, String last_Name, String sSN,
 			long gender, String email, String phone_Number, Date dOB, long residential_Address, long mailing_Address,
 			Date date_Registered, Date date_Approved, Date date_Archived, long admin_Approved, long admin_Archived) {
@@ -178,5 +182,15 @@ public class Customer {
 
 	public void setAdmin_Archived(long admin_Archived) {
 		this.admin_Archived = admin_Archived;
+	}
+
+	@Override
+	public String toString() {
+		return "Customer [customer_ID=" + customer_ID + ", status=" + status + ", first_Name=" + first_Name
+				+ ", middle_Name=" + middle_Name + ", last_Name=" + last_Name + ", SSN=" + SSN + ", gender=" + gender
+				+ ", email=" + email + ", phone_Number=" + phone_Number + ", DOB=" + DOB + ", residential_Address="
+				+ residential_Address + ", mailing_Address=" + mailing_Address + ", date_Registered=" + date_Registered
+				+ ", date_Approved=" + date_Approved + ", date_Archived=" + date_Archived + ", admin_Approved="
+				+ admin_Approved + ", admin_Archived=" + admin_Archived + "]";
 	}
 }

@@ -4,15 +4,15 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 
-public class OracleConnectionPending {
+public class OracleConnection {
 	private static Connection connection;
 	
-	private OracleConnectionPending() 
+	private OracleConnection() 
 	{
 		try {
 			Class.forName("oracle.jdbc.driver.OracleDriver");
 			// may want to use data source and JNDO for practice
-			String url = "pendingcustomers.c9xv5z6yf0yo.us-west-2.rds.amazonaws.com:1521:ORCL";
+			String url = "jdbc:oracle:thin:@approvedcustomers.c9xv5z6yf0yo.us-west-2.rds.amazonaws.com:1521:ORCL";
 			String username = "training";
 			String password = "p4ssw0rd";
 			connection = DriverManager.getConnection(url, username, password);
@@ -26,7 +26,7 @@ public class OracleConnectionPending {
 	{
 		if (connection == null)
 		{
-			new OracleConnectionPending();
+			new OracleConnection();
 		}
 		return connection;
 	}
