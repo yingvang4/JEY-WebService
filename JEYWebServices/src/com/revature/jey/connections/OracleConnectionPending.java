@@ -11,7 +11,7 @@ public class OracleConnectionPending {
 	{
 		try {
 			Class.forName("oracle.jdbc.driver.OracleDriver");
-			
+			// may want to use data source and JNDO for practice
 			String url = "pendingcustomers.c9xv5z6yf0yo.us-west-2.rds.amazonaws.com:1521:ORCL";
 			String username = "training";
 			String password = "p4ssw0rd";
